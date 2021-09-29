@@ -1,4 +1,4 @@
-# CloudGuruChallenge_21.08-app
+# CloudGuruChallenge_21.08-web
 
 ## Project Overview
 
@@ -8,7 +8,7 @@ It's one of three that serves a distinct purpose towards a common goal.
 ### App
 > https://github.com/wheelers-websites/CloudGuruChallenge_21.08-app
 
-[See Repository Overview](#repository-overview)
+[More...](https://github.com/wheelers-websites/CloudGuruChallenge_21.08-app/blob/main/README.md)
 
 ### Env
 > https://github.com/wheelers-websites/CloudGuruChallenge_21.08-env
@@ -18,7 +18,7 @@ It's one of three that serves a distinct purpose towards a common goal.
 ### Web
 > https://github.com/wheelers-websites/CloudGuruChallenge_21.08-web
 
-[More...](https://github.com/wheelers-websites/CloudGuruChallenge_21.08-web/blob/main/README.md)
+[See Repository Overview](#repository-overview)
 
 ## Repository Overview
 
