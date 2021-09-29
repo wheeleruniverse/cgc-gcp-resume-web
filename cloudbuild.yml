@@ -1,0 +1,24 @@
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  - name: node
+    args: ['install']
+    entrypoint: npm
+    timeout: 300s
+
+  - name: node
+    args: ['run', 'build']
+    entrypoint: npm
+    timeout: 300s
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args: ['rsync', '-c', '-d', '-r', 'dist/', 'gs://wheelersadvice']
+    entrypoint: gsutil
+    timeout: 300s
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args: ['compute', 'url-maps', 'invalidate-cdn-cache', 'wheelersadvice', '--path', '/*']
+    entrypoint: gcloud
+    timeout: 300s
