@@ -13,12 +13,17 @@ steps:
     entrypoint: npm
     timeout: 300s
 
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['rsync', '-c', '-d', '-r', 'dist/', 'gs://wheelersadvice']
-    entrypoint: gsutil
-    timeout: 300s
-
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    args: ['compute', 'url-maps', 'invalidate-cdn-cache', 'wheelersadvice', '--path', '/*']
-    entrypoint: gcloud
+  - name: 'gcr.io/cloud-builders/git'
+    args:
+      - '-c'
+      - |
+        git config --global user.email "98767786228@cloudbuild.gserviceaccount.com"
+        git config --global user.name "Cloud Build Service Account"
+        gcloud source repos clone wheelersadvice/cicd/web --project=cloudguruchallenge-2108
+        cd wheelersadvice/cicd/web
+        git checkout candidate
+        git add dist/
+        git commit -m "web deployment for $COMMIT_SHA"
+        git push -u origin candidate
+    entrypoint: /bin/sh
     timeout: 300s
