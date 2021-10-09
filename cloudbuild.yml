@@ -20,11 +20,10 @@ steps:
         git config --global user.email "98767786228@cloudbuild.gserviceaccount.com"
         git config --global user.name "Cloud Build Service Account"
         gcloud source repos clone wheelersadvice/cicd/web --project=cloudguruchallenge-2108
-        git fetch origin candidate
+        cd wheelersadvice/cicd/web
         git checkout candidate
         rm -r wheelersadvice/cicd/web/dist/
-        cp -r dist/ wheelersadvice/cicd/web/
-        cd wheelersadvice/cicd/web
+        cp -r ../../../dist/ .
         git add dist/
         git commit -m "web deployment for $COMMIT_SHA"
         git push -u origin candidate
