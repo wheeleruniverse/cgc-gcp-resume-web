@@ -22,7 +22,7 @@ steps:
         gcloud source repos clone wheelersadvice/cicd/web --project=cloudguruchallenge-2108
         cd wheelersadvice/cicd/web
         git checkout candidate
-        git add dist/
+        git add -f dist/
         git commit -m "web deployment for $COMMIT_SHA"
         git push -u origin candidate
     entrypoint: /bin/sh
