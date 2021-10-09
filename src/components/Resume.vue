@@ -57,9 +57,7 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .description {
   line-height: 2;
   margin: 0 auto;
@@ -87,5 +85,4 @@ export default {
 .section {
   margin: 16px auto;
 }
-
 </style>
