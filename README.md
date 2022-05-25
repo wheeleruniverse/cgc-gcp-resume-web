@@ -6,17 +6,17 @@ This repository was created as part of the ["Your Resume on GCP" #CloudGuruChall
 It's one of three that serves a distinct purpose towards a common goal.
 
 ### App
-> https://github.com/wheelers-websites/cgc-gcp-resume-app
+> https://github.com/wheelerswebservices/cgc-gcp-resume-app
 
-[More...](https://github.com/wheelers-websites/cgc-gcp-resume-app/blob/main/README.md)
+[More...](https://github.com/wheelerswebservices/cgc-gcp-resume-app/blob/main/README.md)
 
 ### Env
-> https://github.com/wheelers-websites/cgc-gcp-resume-env
+> https://github.com/wheelerswebservices/cgc-gcp-resume-env
 
-[More...](https://github.com/wheelers-websites/cgc-gcp-resume-env/blob/main/README.md)
+[More...](https://github.com/wheelerswebservices/cgc-gcp-resume-env/blob/main/README.md)
 
 ### Web
-> https://github.com/wheelers-websites/cgc-gcp-resume-web
+> https://github.com/wheelerswebservices/cgc-gcp-resume-web
 
 [See Repository Overview](#repository-overview)
 
